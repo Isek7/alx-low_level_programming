@@ -16,7 +16,11 @@ int create_file(const char *filename, char *text_content);
 int append_text_to_file(const char *filename, char *text_content);
 
 /**
- * ELF header functions
+ * File: 100-elf_header.c
+ * ELF: header functions
+ * check_elf: checks ELF file
+ * @e_ident: magic
+ *
  */
 void check_elf(unsigned char *e_ident);
 void print_magic(unsigned char *e_ident);
@@ -27,6 +31,5 @@ void print_abi(unsigned char *e_ident);
 void print_osabi(unsigned char *e_ident);
 void print_type(unsigned int e_type, unsigned char *e_ident);
 void print_entry(unsigned long int e_entry, unsigned char *e_ident);
-void close_elf(int elf); 
-
+void close_elf(int elf);
 #endif /* MAIN_H */
