@@ -1,0 +1,12 @@
+max_palindrome = 0
+for i in range(100, 1000):
+    for j in range(100, 1000):
+        product = i * j
+        product_str = str(product)
+        product_str_rev = product_str[::-1]
+        if product_str == product_str_rev:
+            if product > max_palindrome:
+                max_palindrome = product
+f = open("102-result", "w")
+f.write(str(max_palindrome))
+f.close()
